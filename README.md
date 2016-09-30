@@ -1,6 +1,6 @@
 # RequestServiceExtender
 
-ASP.NET Core comes with beautiful a dependency injection system. However, it's not possible to provide additional objects depending on the request, especially when your factory function is async.
+ASP.NET Core comes with a beautiful dependency injection system. However, it's not possible to provide additional objects depending on the request, especially when your factory function is async.
 
 This function replaces the RequestServices in HttpContext with a proxy class in order to provide this functionality.
 
@@ -34,7 +34,7 @@ app
 			// only if you don't want to construct ApplicationDbConnect when it's not needed.
 			ApplicationDbConnect db = null;
 			try {
-				context.AddScoped(a => db ?? (db = new ApplicationDbConnect(strConnectionString)));
+				context.AddScoped(() => db ?? (db = new ApplicationDbConnect(strConnectionString)));
 
 				await next();
 			} finally {
@@ -62,6 +62,10 @@ public class AccountController : Controller {
 ```
 
 You can do anything you want, e.g. changing your storage depending on "testing=true" query string etc. I wrote it to provide varying Azure storage account (CloudStorageAccount) and YouTubeService depending on the Referer on my projects.
+
+# Download
+
+Install [Tamturk.AspNetCore.RequestServiceExtender](https://www.nuget.org/packages/Tamturk.AspNetCore.RequestServiceExtender/) package from Nuget.
 
 # The MIT License (MIT)
 
