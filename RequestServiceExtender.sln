@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{15620E4A-3FEB-4B73-A478-0E5F155B3550}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Tamturk.AspNetCore.RequestServiceExtender", "src\Tamturk.AspNetCore.RequestServiceExtender\Tamturk.AspNetCore.RequestServiceExtender.xproj", "{3E5042EF-4CB6-438F-AA7D-3AFADC9A1BAA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{71886FD8-2D54-42A7-8259-A0B4118D3AC8}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE.md = LICENSE.md
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tamturk.AspNetCore.RequestServiceExtender", "src\Tamturk.AspNetCore.RequestServiceExtender\Tamturk.AspNetCore.RequestServiceExtender.csproj", "{3E5042EF-4CB6-438F-AA7D-3AFADC9A1BAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,5 +29,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3E5042EF-4CB6-438F-AA7D-3AFADC9A1BAA} = {15620E4A-3FEB-4B73-A478-0E5F155B3550}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5101AF9D-5238-4FC7-90B8-248D926420B3}
 	EndGlobalSection
 EndGlobal

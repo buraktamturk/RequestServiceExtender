@@ -8,7 +8,7 @@ namespace Tamturk.AspNetCore.RequestServiceExtender {
         }
 
         public static HttpContext AddScoped<T>(this HttpContext context, Func<T> data) {
-            if(context.RequestServices as IDisposable != null) {
+            if(context.RequestServices is IDisposable) {
                 context.RequestServices = new DisposableProxyServiceProvider<T>(context.RequestServices, data);
             } else {
                 context.RequestServices = new ProxyServiceProvider<T>(context.RequestServices, data);
